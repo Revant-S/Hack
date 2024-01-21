@@ -38,7 +38,8 @@ const UserSchema = new mongoose.Schema({
         required: true,
     },
     ParticipatedPoles : {
-        type : [String],
+        type : [mongoose.Schema.Types.ObjectId],
+        ref : "PollData",
         default : []
     }
 })
